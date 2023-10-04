@@ -1,4 +1,6 @@
-# boox-tab-ultra-c-custom-hw-keyboard-shortcuts
+# Boox Tab Ultra C custom hardware keyboard shortcuts
+
+Removes some of the vanilla shortcuts and remaps a few too.
 
 My raw notes below:
 
@@ -27,6 +29,7 @@ boox tab ultra c hardware keyboard shortcut redefinition
     - make changes
     - rezip
     - make a magisk module out of it
+      - just zip it up, the zip file's name might have to match the module id defined in the module properties file
     - adb push the module to the device
     - adb shell, then su, then magisk --install-module module.zip, then reboot
       - installing via the magisk ui would fail, for some reason
@@ -40,3 +43,7 @@ boox tab ultra c hardware keyboard shortcut redefinition
   - jumped through a few hoops to get magisk module working
     - not sure what the problem was
 ```
+
+## Patch file
+
+Added to the root of module [a patch file](https://github.com/dmos62/boox-tab-ultra-c-custom-hw-keyboard-shortcuts/blob/main/framework_res.patch) of changes I made (it doesn't have a functional effect). Useful if I ever want to look at what changes I made or if I have to remake them on top of an updated apk.
