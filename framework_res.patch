@@ -1,0 +1,278 @@
+diff -ur framework-res_unpatched/res/raw/bt_keypad.json framework-res/res/raw/bt_keypad.json
+--- framework-res_unpatched/res/raw/bt_keypad.json	2008-12-31 23:00:00.000000000 +0200
++++ framework-res/res/raw/bt_keypad.json	2023-10-04 22:22:21.972200500 +0300
+@@ -4,7 +4,7 @@
+       "keySet": [
+         "KEYCODE_F1"
+       ],
+-      "shortPressAction": "KEYCODE_MENU",
++      "shortPressAction": "KEYCODE_F1",
+       "longPressAction": "",
+       "repeat": false
+     },
+@@ -12,7 +12,7 @@
+       "keySet": [
+         "KEYCODE_F2"
+       ],
+-      "shortPressAction": "KEYCODE_BACK",
++      "shortPressAction": "KEYCODE_F2",
+       "longPressAction": "",
+       "repeat": false
+     },
+@@ -20,7 +20,7 @@
+       "keySet": [
+         "KEYCODE_F3"
+       ],
+-      "shortPressAction": "showDisplayControlAndIncreaseContrast",
++      "shortPressAction": "KEYCODE_F3",
+       "longPressAction": "",
+       "repeat": false
+     },
+@@ -28,7 +28,7 @@
+       "keySet": [
+         "KEYCODE_F4"
+       ],
+-      "shortPressAction": "fullRefreshScreen",
++      "shortPressAction": "KEYCODE_F4",
+       "longPressAction": "",
+       "repeat": false
+     },
+@@ -36,7 +36,7 @@
+       "keySet": [
+         "KEYCODE_F5"
+       ],
+-      "shortPressAction": "screenshot",
++      "shortPressAction": "KEYCODE_F5",
+       "longPressAction": "",
+       "repeat": false
+     },
+@@ -44,7 +44,7 @@
+       "keySet": [
+         "KEYCODE_F6"
+       ],
+-      "shortPressAction": "toggleFrontLight",
++      "shortPressAction": "KEYCODE_F6",
+       "longPressAction": "",
+       "repeat": false
+     },
+@@ -60,7 +60,7 @@
+       "keySet": [
+         "KEYCODE_F8"
+       ],
+-      "shortPressAction": "back_to_home",
++      "shortPressAction": "KEYCODE_F8",
+       "longPressAction": "",
+       "repeat": false
+     },
+@@ -68,7 +68,7 @@
+       "keySet": [
+         "KEYCODE_F9"
+       ],
+-      "shortPressAction": "showDisplayControlDialog",
++      "shortPressAction": "KEYCODE_F9",
+       "longPressAction": "",
+       "repeat": false
+     },
+@@ -76,7 +76,7 @@
+       "keySet": [
+         "KEYCODE_F10"
+       ],
+-      "shortPressAction": "showRefreshModeDialog",
++      "shortPressAction": "KEYCODE_F10",
+       "longPressAction": "",
+       "repeat": false
+     },
+@@ -92,7 +92,7 @@
+       "keySet": [
+         "KEYCODE_F12"
+       ],
+-      "shortPressAction": "openFrontLightDialog",
++      "shortPressAction": "KEYCODE_F12",
+       "longPressAction": "",
+       "repeat": false
+     }
+diff -ur framework-res_unpatched/res/raw/keypad_color.json framework-res/res/raw/keypad_color.json
+--- framework-res_unpatched/res/raw/keypad_color.json	2008-12-31 23:00:00.000000000 +0200
++++ framework-res/res/raw/keypad_color.json	2023-10-04 22:29:11.314412000 +0300
+@@ -3,15 +3,6 @@
+     {
+       "keySet": [
+         "KEYCODE_META_LEFT",
+-        "KEYCODE_1"
+-      ],
+-      "shortcutCategory": "title",
+-      "keySetAlias":"Cmd + 1",
+-      "shortPressAction": "showKeyboardShortcutDialog"
+-    },
+-    {
+-      "keySet": [
+-        "KEYCODE_META_LEFT",
+         "KEYCODE_ENTER"
+       ],
+       "functionNameResId": "shortcut_function_main_screen",
+@@ -34,6 +25,45 @@
+     {
+       "keySet": [
+         "KEYCODE_META_LEFT",
++        "KEYCODE_R"
++      ],
++      "shortPressAction": "fullRefreshScreen",
++      "longPressAction": "",
++      "repeat": false
++    },
++    {
++      "keySet": [
++        "KEYCODE_META_LEFT",
++        "KEYCODE_B"
++      ],
++      "shortPressAction": "toggleFrontLight",
++      "longPressAction": "",
++      "repeat": false
++    },
++    {
++      "keySet": [
++        "KEYCODE_CTRL_LEFT",
++        "KEYCODE_META_LEFT",
++        "KEYCODE_B"
++      ],
++      "shortPressAction": "openFrontLightDialog",
++      "longPressAction": "",
++      "repeat": false
++    },
++    {
++      "keySet": [
++        "KEYCODE_CTRL_LEFT",
++        "KEYCODE_SHIFT_LEFT",
++        "KEYCODE_META_LEFT",
++        "KEYCODE_B"
++      ],
++      "shortPressAction": "showDisplayControlDialog",
++      "longPressAction": "",
++      "repeat": false
++    },
++    {
++      "keySet": [
++        "KEYCODE_META_LEFT",
+         "KEYCODE_DEL"
+       ],
+       "functionNameResId": "shortcut_function_back",
+@@ -72,18 +102,6 @@
+     },
+     {
+       "keySet": [
+-        "KEYCODE_SHIFT_LEFT",
+-        "KEYCODE_CTRL_LEFT"
+-      ],
+-      "functionNameResId": "shortcut_function_switch_ime",
+-      "shortcutCategory": "system_shortcuts",
+-      "keySetAlias":"Ctrl + Shift",
+-      "shortPressAction": "switchIme",
+-      "longPressAction": "",
+-      "repeat": false
+-    },
+-    {
+-      "keySet": [
+         "KEYCODE_ALT_LEFT",
+         "KEYCODE_F4"
+       ],
+@@ -154,61 +172,6 @@
+     },
+     {
+       "keySet": [
+-        "KEYCODE_F4"
+-      ],
+-      "functionNameResId": "shortcut_function_screen_refresh",
+-      "shortcutCategory": "system_shortcuts",
+-      "keySetAlias":"Fn + 5",
+-      "shortPressAction": "fullRefreshScreen",
+-      "longPressAction": "",
+-      "repeat": false
+-    },
+-    {
+-      "keySet": [
+-        "KEYCODE_F5"
+-      ],
+-      "functionNameResId": "shortcut_function_mute",
+-      "shortcutCategory": "system_shortcuts",
+-      "keySetAlias":"Fn + 6",
+-      "shortPressAction": "KEYCODE_MUTE",
+-      "longPressAction": "",
+-      "repeat": false
+-    },
+-    {
+-      "keySet": [
+-        "KEYCODE_F6"
+-      ],
+-      "functionNameResId": "shortcut_function_volume_down",
+-      "shortcutCategory": "system_shortcuts",
+-      "keySetAlias":"Fn + 7",
+-      "shortPressAction": "KEYCODE_VOLUME_DOWN",
+-      "longPressAction": "",
+-      "repeat": false
+-    },
+-    {
+-      "keySet": [
+-        "KEYCODE_F7"
+-      ],
+-      "functionNameResId": "shortcut_function_volume_up",
+-      "shortcutCategory": "system_shortcuts",
+-      "keySetAlias":"Fn + 8",
+-      "shortPressAction": "KEYCODE_VOLUME_UP",
+-      "longPressAction": "",
+-      "repeat": false
+-    },
+-    {
+-      "keySet": [
+-        "KEYCODE_F8"
+-      ],
+-      "functionNameResId": "shortcut_function_volume_screen_shot",
+-      "shortcutCategory": "system_shortcuts",
+-      "keySetAlias":"Fn + 9",
+-      "shortPressAction": "screenshot",
+-      "longPressAction": "",
+-      "repeat": false
+-    },
+-    {
+-      "keySet": [
+         "KEYCODE_BACK"
+       ],
+       "shortPressAction": "KEYCODE_BACK",
+@@ -238,38 +201,6 @@
+       "shortPressAction": "KEYCODE_PAGE_UP",
+       "longPressAction": "KEYCODE_MENU",
+       "repeat": false
+-    },
+-    {
+-      "keySet": [
+-        "KEYCODE_PAGE_DOWN"
+-      ],
+-      "shortPressAction": "KEYCODE_PAGE_DOWN",
+-      "longPressAction": "fullRefreshScreen",
+-      "repeat": false
+-    },
+-    {
+-      "keySet": [
+-        "KEYCODE_F11"
+-      ],
+-      "shortPressAction": "toggleA2",
+-      "longPressAction": "",
+-      "repeat": false
+-    },
+-    {
+-      "keySet": [
+-        "KEYCODE_VOLUME_UP"
+-      ],
+-      "shortPressAction": "switchByConf",
+-      "longPressAction": "customSideKeyLongPressUp",
+-      "repeat": false
+-    },
+-    {
+-      "keySet": [
+-        "KEYCODE_VOLUME_DOWN"
+-      ],
+-      "shortPressAction": "switchByConf",
+-      "longPressAction": "customSideKeyLongPressDown",
+-      "repeat": false
+     }
+   ]
+ }
