@@ -47,3 +47,8 @@ boox tab ultra c hardware keyboard shortcut redefinition
 ## Patch file
 
 Added to the root of module [a patch file](https://github.com/dmos62/boox-tab-ultra-c-custom-hw-keyboard-shortcuts/blob/main/framework_res.patch) of changes I made (it doesn't have a functional effect). Useful if I ever want to look at what changes I made or if I have to remake them on top of an updated apk.
+
+
+## Credit
+
+Most of my insights came from a person named [Renate on mobileread.com](https://www.mobileread.com/forums/showpost.php?p=4166433&postcount=27) ([wayback machine](https://web.archive.org/web/20231004200908/https://www.mobileread.com/forums/showpost.php?p=4166433&postcount=27)). Clicking keys while watching `adb logcat` was also useful: apparently the relevant system apps are very verbose in their logs.
