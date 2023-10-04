@@ -1,0 +1,6 @@
+id=custom-framework
+name=custom-framework
+version=1
+versionCode=1
+author=Dominykas Mostauskis
+description=Replaces Boox Ultra C's framework-res.apk with one that has far fewer hardware keyboard shortcuts.
